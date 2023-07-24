@@ -55,10 +55,11 @@ main {
 
 h1 {
     font: var(--heading-sm);
-    color: var(--very-dark-blue);
+    color: var(--grey);
     margin-bottom: 1rem;
     & span{
         font: var(--heading-md);
+        color: var(--very-dark-blue);
     }
 }
 
@@ -161,6 +162,7 @@ form {
     display: grid;
     place-items: center;
     font: var(--footer);
+    color: var(--grey);
     &__socials {
         width: 120px;
         padding-bottom: 1.5625rem;

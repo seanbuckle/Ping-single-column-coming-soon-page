@@ -53,11 +53,12 @@ main {
 
 h1 {
   font: var(--heading-sm);
-  color: var(--very-dark-blue);
+  color: var(--grey);
   margin-bottom: 1rem;
 }
 h1 span {
   font: var(--heading-md);
+  color: var(--very-dark-blue);
 }
 
 .subtitle {
@@ -161,6 +162,7 @@ form section {
   display: grid;
   place-items: center;
   font: var(--footer);
+  color: var(--grey);
 }
 .site-footer__socials {
   width: 120px;
