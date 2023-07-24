@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  /* primary */
+  --blue: hsl(223, 87%, 63%);
+  /* secondary */
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  /* neutral */
+  --grey: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  --white: hsl(0, 0%, 100%);
+  /* font */
+  --font-family: "Libre Franklin", sans-serif;
+  --heading-md: 700 1.375rem/2rem var(--font-family);
+  --heading-sm: 300 1.375rem/2rem var(--font-family);
+  --subtitle: 300 0.75rem/normal var(--font-family);
+  --placeholder: 300 0.75rem/1.25rem var(--font-family);
+  --btn: 600 0.75rem/1rem var(--font-family);
+  --footer: 300 0.625rem/normal var(--font-family);
+}
+@media screen and (min-width: 697px) {
+  :root {
+    --heading-md: 700 3rem/3.75rem var(--font-family);
+    --heading-sm: 300 3rem/3.75rem var(--font-family);
+    --subtitle: 300 1.25rem/normal var(--font-family);
+    --placeholder: 300 1rem/1.25rem var(--font-family);
+    --btn: 600 1rem/normal var(--font-family);
+    --footer: 300 0.75rem/normal var(--font-family);
+  }
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  font-family: var(--font-family);
+}
+
+main {
+  padding-bottom: 7.5rem;
+  display: grid;
+  place-items: start center;
+}
+
+h1 {
+  font: var(--heading-sm);
+  color: var(--very-dark-blue);
+  margin-bottom: 1rem;
+}
+h1 span {
+  font: var(--heading-md);
+}
+
+.subtitle {
+  font: var(--subtitle);
+  color: var(--very-dark-blue);
+  margin-bottom: 1.5rem;
+}
+
+.wrapper {
+  width: min(100%, 712px);
+  padding: 80px 1.75rem 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 86px;
+  padding-bottom: 2rem;
+}
+@media (min-width: 697px) {
+  .logo {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.dashboard {
+  width: min(100%, 640px);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4.5rem;
+}
+@media (min-width: 697px) {
+  form {
+    flex-direction: row;
+    gap: 1rem;
+    padding-bottom: 5.875rem;
+  }
+}
+form section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 697px) {
+  form section {
+    width: 421px;
+  }
+}
+
+.email {
+  width: 100%;
+  height: 56px;
+  padding: 0 30px;
+  border-radius: 28px;
+  border: 1px solid #C2D3FF;
+  font: var(--placeholder);
+  background: #FFF;
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0);
+}
+.email::placeholder {
+  color: var(--grey);
+}
+.email__error {
+  border-color: var(--light-red);
+}
+
+.error-text {
+  font: var(--footer);
+  font-style: italic;
+  color: var(--light-red);
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 100%;
+  height: 56px;
+  font: var(--btn);
+  border-radius: 28px;
+  background: linear-gradient(hsl(223, 87%, 63%), hsl(223, 87%, 63%));
+  color: var(--white);
+  box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.23);
+}
+@media (min-width: 697px) {
+  .btn {
+    width: 200px;
+  }
+}
+.btn:hover {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.2040085495), hsla(0, 0%, 100%, 0.2040085495)), linear-gradient(hsl(223, 87%, 63%), hsl(223, 87%, 63%));
+}
+
+.site-footer {
+  height: min-content;
+  padding-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  font: var(--footer);
+}
+.site-footer__socials {
+  width: 120px;
+  padding-bottom: 1.5625rem;
+  display: flex;
+  justify-content: space-between;
+}
+.site-footer__social-icons {
+  width: 31px;
+  aspect-ratio: 1/1;
+  padding: 0.5rem;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: var(--footer);
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.site-footer__social-icons svg {
+  fill: var(--blue);
+}
+.site-footer__social-icons:hover {
+  background-color: var(--blue);
+}
+.site-footer__social-icons:hover svg {
+  fill: var(--white);
+}
+.site-footer__attribution a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.site-footer__attribution a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
